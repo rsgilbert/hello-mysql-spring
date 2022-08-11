@@ -1,0 +1,7 @@
+// Setting up db
+CREATE DATABASE hello_mysql;
+// create user
+CREATE user 'springuser'@'%' identified by 'stanislav100';
+// grant all privileges to the user
+GRANT ALL ON hello_mysql.* to 'springuser'@'%';
+
