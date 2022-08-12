@@ -15,7 +15,7 @@ public class MainController {
     record CreateUserRequestBody(String name, String email) {
     }
 
-    @PostMapping("/")
+    @PostMapping
     public @ResponseBody User addNewUser(@RequestBody CreateUserRequestBody requestBody) {
         System.out.println("Req body" + requestBody);
         User u = new User();
@@ -26,8 +26,8 @@ public class MainController {
         return u;
     }
 
-    // Eg http://localhost:8080/users/   -- note trailing /
-    @GetMapping("/")
+    // Eg http://localhost:8080/users
+    @GetMapping("")
     public @ResponseBody Iterable<User> allUsers() {
         return userRepository.findAll();
     }

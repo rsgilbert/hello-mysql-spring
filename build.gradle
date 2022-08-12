@@ -2,6 +2,12 @@ plugins {
 	id 'org.springframework.boot' version '2.7.2'
 	id 'io.spring.dependency-management' version '1.0.12.RELEASE'
 	id 'java'
+	id 'org.asciidoctor.jvm.convert' version '3.3.2'
+}
+
+asciidoctor {
+	sourceDir("src/doc/asciidoc")
+	attributes 'snippets': file('target/snippets')
 }
 
 group = 'net.passioncloud'
@@ -17,6 +23,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	runtimeOnly 'mysql:mysql-connector-java'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
 }
 
 tasks.named('test') {

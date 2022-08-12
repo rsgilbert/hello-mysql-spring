@@ -1,0 +1,8 @@
+[source,http,options="nowrap"]
+----
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 102
+
+[{"id":"A","name":"John","email":"john@mail.com"},{"id":"B","name":"Peter","email":"peter@house.com"}]
+----

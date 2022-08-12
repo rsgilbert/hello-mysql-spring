@@ -1,0 +1,14 @@
+= Users web service
+
+.List of users
+
+The web service base URL is
+http://localhost:8080/
+
+.request
+include::{snippets}/main/http-request.adoc[]
+
+.response
+include::{snippets}/main/http-response.adoc[]
+
+Above request allows you to fetch a list of users.
